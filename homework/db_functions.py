@@ -3,7 +3,21 @@ from typing import Any, Dict, List
 import mysql.connector
 import pandas
 import pydoc
+# config.py 또는 main.py 등에서
 
+from dotenv import load_dotenv
+import os
+
+# .env 파일을 찾아 환경 변수로 로드
+load_dotenv()
+
+# 환경 변수 가져오기
+host = os.getenv("DB_HOST")
+user = os.getenv("DB_USER")
+password = os.getenv("DB_PASSWORD")
+database = os.getenv("DB_NAME")
+
+print(f"DB 접속 정보: {host=} {user=} {password=} {database=}")
 
 def get_connection(host: str, user: str, password: str, database: str="amrbase") -> mysql.connector.connection.MySQLConnectionAbstract:
     """
@@ -91,13 +105,13 @@ print(f"get_connection_and_cursor.__doc__ :\n{get_connection_and_cursor.__doc__}
 print(pydoc.render_doc(get_connection_and_cursor))
 
 
-# remote = get_connection("database-1.cv24g4i2g7ub.ap-northeast-2.rds.amazonaws.com", "root", "AddineDu202510th!#")
+# remote = get_connection(host, user, password)
 
 # r_cursor = remote.cursor(buffered=True)
 
 # close_conn_and_cursor(remote, r_cursor)
 
-remote_conn, cursor = get_connection_and_cursor("database-1.cv24g4i2g7ub.ap-northeast-2.rds.amazonaws.com", "root", "AddineDu202510th!#")
+remote_conn, cursor = get_connection_and_cursor(host, user, password)
 
 
 execute_sql(cursor, "SELECT * FROM crime_status")
