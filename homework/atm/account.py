@@ -327,7 +327,7 @@ class Account:
     }
 
 
-    def __init__(self, name: str, account_number: int, pin: int , balance: float):
+    def __init__(self, name: str, account_number: int, pin: int , balance: int):
         self.name = name
         self.account_number = account_number
         self.pin = pin

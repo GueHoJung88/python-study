@@ -22,14 +22,14 @@ if __name__ == "__main__":
     print("ATM System main is called...")
 
     study_accounts = [
-    Account("김연희", "{:014d}".format(random.randrange(1,((1e+14)-1))), "{:04d}".format(random.randrange(1,9999)), int(random.random() * float((f"1e{random.randrange(1,20)}")))),
-    Account("박재오", "{:014d}".format(random.randrange(1,((1e+14)-1))), "{:04d}".format(random.randrange(1,9999)), int(random.random() * float((f"1e{random.randrange(1,20)}")))),
-    Account("백상현", "{:014d}".format(random.randrange(1,((1e+14)-1))), "{:04d}".format(random.randrange(1,9999)), int(random.random() * float((f"1e{random.randrange(1,20)}")))),
-    Account("서지민", "{:014d}".format(random.randrange(1,((1e+14)-1))), "{:04d}".format(random.randrange(1,9999)), int(random.random() * float((f"1e{random.randrange(1,20)}")))),
-    Account("이건명", "{:014d}".format(random.randrange(1,((1e+14)-1))), "{:04d}".format(random.randrange(1,9999)), int(random.random() * float((f"1e{random.randrange(1,20)}")))),
-    Account("임정찬", "{:014d}".format(random.randrange(1,((1e+14)-1))), "{:04d}".format(random.randrange(1,9999)), int(random.random() * float((f"1e{random.randrange(1,20)}")))),
-    Account("최승혁", "{:014d}".format(random.randrange(1,((1e+14)-1))), "{:04d}".format(random.randrange(1,9999)), int(random.random() * float((f"1e{random.randrange(1,20)}")))),
-    Account("정규호", "{:014d}".format(random.randrange(1,((1e+14)-1))), "{:04d}".format(random.randrange(1,9999)), int(random.random() * float((f"1e{random.randrange(1,20)}"))))
+    Account("김연희", "{:014d}".format(random.randrange(1,(int(1e+14)-1))), "{:04d}".format(random.randrange(1,9999)), int(random.random() * float((f"1e{random.randrange(1,20)}")))),
+    Account("박재오", "{:014d}".format(random.randrange(1,(int(1e+14)-1))), "{:04d}".format(random.randrange(1,9999)), int(random.random() * float((f"1e{random.randrange(1,20)}")))),
+    Account("백상현", "{:014d}".format(random.randrange(1,(int(1e+14)-1))), "{:04d}".format(random.randrange(1,9999)), int(random.random() * float((f"1e{random.randrange(1,20)}")))),
+    Account("서지민", "{:014d}".format(random.randrange(1,(int(1e+14)-1))), "{:04d}".format(random.randrange(1,9999)), int(random.random() * float((f"1e{random.randrange(1,20)}")))),
+    Account("이건명", "{:014d}".format(random.randrange(1,(int(1e+14)-1))), "{:04d}".format(random.randrange(1,9999)), int(random.random() * float((f"1e{random.randrange(1,20)}")))),
+    Account("임정찬", "{:014d}".format(random.randrange(1,(int(1e+14)-1))), "{:04d}".format(random.randrange(1,9999)), int(random.random() * float((f"1e{random.randrange(1,20)}")))),
+    Account("최승혁", "{:014d}".format(random.randrange(1,(int(1e+14)-1))), "{:04d}".format(random.randrange(1,9999)), int(random.random() * float((f"1e{random.randrange(1,20)}")))),
+    Account("정규호", "{:014d}".format(random.randrange(1,(int(1e+14)-1))), "{:04d}".format(random.randrange(1,9999)), int(random.random() * float((f"1e{random.randrange(1,20)}"))))
     ]
 
     print("파산 확률을 입력하세요.")
